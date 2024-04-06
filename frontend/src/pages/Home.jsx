@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     const fetchNotlar = async () => {
       const response = await fetch(
-        "https://mern-stack-todo-app-backend.vercel.app/api/notlar",
+        "https://mern-stack-todo-app-backend-qx9o.onrender.com/api/notlar",
         {
           headers: {
             Authorization: `Bearer ${kullanici.token}`,

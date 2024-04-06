@@ -16,7 +16,7 @@ function NotForm() {
     }
     const not = { baslik, aciklama };
     const response = await fetch(
-      `https://mern-stack-todo-app-backend.vercel.app/api/notlar`,
+      `https://mern-stack-todo-app-backend-qx9o.onrender.com/api/notlar`,
       {
         method: "POST",
         body: JSON.stringify(not),

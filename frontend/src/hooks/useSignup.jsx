@@ -9,7 +9,7 @@ export const useSignup = () => {
     setYukleniyor(true);
     setHata(null);
     const response = await fetch(
-      "https://mern-stack-todo-app-backend.vercel.app/api/kullanici/signup",
+      "https://mern-stack-todo-app-backend-qx9o.onrender.com/api/kullanici/signup",
       {
         method: "POST",
         body: JSON.stringify({ email, parola }),
