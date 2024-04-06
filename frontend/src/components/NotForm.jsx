@@ -15,14 +15,17 @@ function NotForm() {
       return;
     }
     const not = { baslik, aciklama };
-    const response = await fetch(`http://localhost:4001/api/notlar`, {
-      method: "POST",
-      body: JSON.stringify(not),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${kullanici.token}`,
-      },
-    });
+    const response = await fetch(
+      `https://mern-stack-todo-app-backend.vercel.app/api/notlar`,
+      {
+        method: "POST",
+        body: JSON.stringify(not),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${kullanici.token}`,
+        },
+      }
+    );
     const json = await response.json();
     // console.log(json);
     if (!response.ok) {

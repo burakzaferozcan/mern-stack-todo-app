@@ -8,13 +8,16 @@ export const useLogin = () => {
   const login = async (email, parola) => {
     setYukleniyor(true);
     setHata(null);
-    const response = await fetch("http://localhost:4001/api/kullanici/login", {
-      method: "POST",
-      body: JSON.stringify({ email, parola }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://mern-stack-todo-app-backend.vercel.app/api/kullanici/login",
+      {
+        method: "POST",
+        body: JSON.stringify({ email, parola }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const json = await response.json();
     if (response.ok) {
       localStorage.setItem("kullanici", JSON.stringify(json));

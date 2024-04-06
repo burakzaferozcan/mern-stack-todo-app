@@ -14,7 +14,7 @@ function NotDetay({ not }) {
       return;
     }
     const response = await fetch(
-      `http://localhost:4001/api/notlar/${not._id}`,
+      `https://mern-stack-todo-app-backend.vercel.app/api/notlar/${not._id}`,
       {
         method: "DELETE",
         headers: {
